@@ -660,6 +660,123 @@ h2 {
     color: var(--accent-color);
 }
 
+/* Skills Section Styles */
+.skills {
+    padding: 5rem 10%;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(107, 70, 193, 0.2);
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Skill item animations */
+.skill-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.skill-item:nth-child(2n) {
+    animation-delay: 0.2s;
+}
+
+.skill-item:nth-child(3n) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading state for skills */
+.loading-skills {
+    text-align: center;
+    padding: 2rem;
+    color: var(--primary-color);
+}
+
+.loading-skills i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.loading-skills p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Hide loading when skills are loaded */
+.skills-grid:not(:empty) .loading-skills {
+    display: none;
+}
+
+/* Skills animation */
+.skill-item {
+    animation: skillFadeIn 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes skillFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills {
+        padding: 3rem 5%;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .skill-item i {
+        font-size: 2rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .project-grid {

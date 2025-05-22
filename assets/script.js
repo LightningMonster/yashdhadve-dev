@@ -67,21 +67,41 @@ type();
 //     }
 // ];
 
-// Skills Data
-const skills = [
-    { name: 'JavaScript', icon: 'fab fa-js' },
-    { name: 'HTML5', icon: 'fab fa-html5' },
-    { name: 'CSS3', icon: 'fab fa-css3-alt' },
-    { name: 'Responsive Design', icon: 'fas fa-mobile-alt' },
-    { name: 'Web APIs', icon: 'fas fa-code' },
-    { name: 'Git', icon: 'fab fa-git-alt' },
-    { name: 'UI/UX', icon: 'fas fa-paint-brush' },
-    { name: 'Performance', icon: 'fas fa-tachometer-alt' },
-    { name: 'Accessibility', icon: 'fas fa-universal-access' },
-    { name: 'SEO', icon: 'fas fa-search' }
-];
+// Initialize sections when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Skills Data
+    const skills = [
+        { name: 'JavaScript', icon: 'fab fa-js' },
+        { name: 'HTML5', icon: 'fab fa-html5' },
+        { name: 'CSS3', icon: 'fab fa-css3-alt' },
+        { name: 'Responsive Design', icon: 'fas fa-mobile-alt' },
+        { name: 'Web APIs', icon: 'fas fa-code' },
+        { name: 'Git', icon: 'fab fa-git-alt' },
+        { name: 'UI/UX', icon: 'fas fa-paint-brush' },
+        { name: 'Performance', icon: 'fas fa-tachometer-alt' },
+        { name: 'Accessibility', icon: 'fas fa-universal-access' },
+        { name: 'SEO', icon: 'fas fa-search' }
+    ];
 
-// Populate Projects
+    // Initialize Skills Section
+    const skillsGrid = document.querySelector('.skills-grid');
+    if (skillsGrid) {
+        console.log('Initializing skills section...');
+        skillsGrid.innerHTML = ''; // Clear existing content
+        skills.forEach((skill, index) => {
+            const skillItem = document.createElement('div');
+            skillItem.className = 'skill-item glass-card';
+            skillItem.style.animationDelay = `${index * 0.1}s`;
+            skillItem.innerHTML = `
+                <i class="${skill.icon}"></i>
+                <p>${skill.name}</p>
+            `;
+            skillsGrid.appendChild(skillItem);
+        });
+    }
+});
+
+// Projects section
 const projectGrid = document.querySelector('.project-grid');
 projects.forEach(project => {
     const projectCard = document.createElement('div');
@@ -102,15 +122,20 @@ projects.forEach(project => {
 
 // Populate Skills
 const skillsGrid = document.querySelector('.skills-grid');
-skills.forEach(skill => {
-    const skillItem = document.createElement('div');
-    skillItem.className = 'skill-item';
-    skillItem.innerHTML = `
-        <i class="${skill.icon}"></i>
-        <p>${skill.name}</p>
-    `;
-    skillsGrid.appendChild(skillItem);
-});
+if (skillsGrid) {
+    // Clear existing content
+    skillsGrid.innerHTML = '';
+    
+    skills.forEach(skill => {
+        const skillItem = document.createElement('div');
+        skillItem.className = 'skill-item glass-card';
+        skillItem.innerHTML = `
+            <i class="${skill.icon}"></i>
+            <p>${skill.name}</p>
+        `;
+        skillsGrid.appendChild(skillItem);
+    });
+}
 
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
