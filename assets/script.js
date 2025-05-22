@@ -71,32 +71,38 @@ type();
 document.addEventListener('DOMContentLoaded', () => {
     // Skills Data
     const skills = [
-        { name: 'JavaScript', icon: 'fab fa-js' },
-        { name: 'HTML5', icon: 'fab fa-html5' },
-        { name: 'CSS3', icon: 'fab fa-css3-alt' },
-        { name: 'Responsive Design', icon: 'fas fa-mobile-alt' },
-        { name: 'Web APIs', icon: 'fas fa-code' },
-        { name: 'Git', icon: 'fab fa-git-alt' },
-        { name: 'UI/UX', icon: 'fas fa-paint-brush' },
-        { name: 'Performance', icon: 'fas fa-tachometer-alt' },
-        { name: 'Accessibility', icon: 'fas fa-universal-access' },
-        { name: 'SEO', icon: 'fas fa-search' }
+        { name: 'Python', icon: 'fab fa-python' },
+        { name: 'Java', icon: 'fab fa-java' },
+        { name: 'C Language', icon: 'fas fa-code' },
+        { name: 'PHP', icon: 'fab fa-php' },
+        { name: 'HTML', icon: 'fab fa-html5' },
+        { name: 'CSS', icon: 'fab fa-css3-alt' },
+        { name: 'SQL', icon: 'fas fa-database' },
+        { name: 'Figma', icon: 'fab fa-figma' },
+        { name: 'Web Design', icon: 'fas fa-palette' },
+        { name: 'Full-stack Development', icon: 'fas fa-layer-group' },
+        { name: 'Problem-Solving', icon: 'fas fa-puzzle-piece' },
+        { name: 'Computer Literacy', icon: 'fas fa-laptop-code' },
+        { name: 'Project Management', icon: 'fas fa-tasks' },
+        { name: 'Database', icon: 'fas fa-server' },
+        { name: 'AI & Prompt Engineering', icon: 'fas fa-robot' }
     ];
 
     // Initialize Skills Section
     const skillsGrid = document.querySelector('.skills-grid');
     if (skillsGrid) {
-        console.log('Initializing skills section...');
         skillsGrid.innerHTML = ''; // Clear existing content
         skills.forEach((skill, index) => {
-            const skillItem = document.createElement('div');
-            skillItem.className = 'skill-item glass-card';
-            skillItem.style.animationDelay = `${index * 0.1}s`;
-            skillItem.innerHTML = `
+            const skillCard = document.createElement('div');
+            skillCard.className = 'skill-card';
+            skillCard.style.setProperty('--i', index + 1);
+            
+            skillCard.innerHTML = `
                 <i class="${skill.icon}"></i>
-                <p>${skill.name}</p>
+                <h3>${skill.name}</h3>
             `;
-            skillsGrid.appendChild(skillItem);
+            
+            skillsGrid.appendChild(skillCard);
         });
     }
 });
