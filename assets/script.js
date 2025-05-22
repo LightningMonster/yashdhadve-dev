@@ -43,29 +43,29 @@ function erase() {
 type();
 
 // Projects Data
-const projects = [
-    {
-        title: 'Task Manager',
-        description: 'A responsive task management application with local storage, drag-and-drop functionality, and task categories.',
-        image: 'https://via.placeholder.com/300x200',
-        technologies: ['JavaScript', 'HTML5', 'CSS3', 'LocalStorage API'],
-        link: 'https://github.com/yashdhadve/task-manager'
-    },
-    {
-        title: 'Weather Dashboard',
-        description: 'Interactive weather dashboard with real-time updates, 5-day forecast, and location search.',
-        image: 'https://via.placeholder.com/300x200',
-        technologies: ['JavaScript', 'Weather API', 'HTML/CSS'],
-        link: 'https://github.com/yashdhadve/weather-dashboard'
-    },
-    {
-        title: 'Portfolio Gallery',
-        description: 'Dynamic image gallery with filtering, lightbox view, and smooth animations.',
-        image: 'https://via.placeholder.com/300x200',
-        technologies: ['JavaScript', 'CSS Grid', 'Animations'],
-        link: 'https://github.com/yashdhadve/portfolio-gallery'
-    }
-];
+// const projects = [
+//     {
+//         title: 'Task Manager',
+//         description: 'A responsive task management application with local storage, drag-and-drop functionality, and task categories.',
+//         image: 'https://via.placeholder.com/300x200',
+//         technologies: ['JavaScript', 'HTML5', 'CSS3', 'LocalStorage API'],
+//         link: 'https://github.com/yashdhadve/task-manager'
+//     },
+//     {
+//         title: 'Weather Dashboard',
+//         description: 'Interactive weather dashboard with real-time updates, 5-day forecast, and location search.',
+//         image: 'https://via.placeholder.com/300x200',
+//         technologies: ['JavaScript', 'Weather API', 'HTML/CSS'],
+//         link: 'https://github.com/yashdhadve/weather-dashboard'
+//     },
+//     {
+//         title: 'Portfolio Gallery',
+//         description: 'Dynamic image gallery with filtering, lightbox view, and smooth animations.',
+//         image: 'https://via.placeholder.com/300x200',
+//         technologies: ['JavaScript', 'CSS Grid', 'Animations'],
+//         link: 'https://github.com/yashdhadve/portfolio-gallery'
+//     }
+// ];
 
 // Skills Data
 const skills = [

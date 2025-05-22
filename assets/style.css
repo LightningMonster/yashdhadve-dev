@@ -311,34 +311,56 @@ h2 {
 
 /* Project Detail Page */
 .project-detail {
-    padding: 8rem 5% 5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 120px 5% 5rem;
+    min-height: 100vh;
 }
 
 .back-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    color: var(--text-color);
     text-decoration: none;
     margin-bottom: 2rem;
-    font-weight: 500;
+    transition: transform 0.3s ease;
 }
 
 .back-link:hover {
-    text-decoration: underline;
+    transform: translateX(-5px);
 }
 
-.project-header {
-    margin-bottom: 3rem;
-    position: relative;
+.project {
+    padding: 2rem;
+    border-radius: 20px;
 }
 
-.project-header h1 {
+.project-title-area {
+    margin-bottom: 2rem;
+}
+
+.project-title-area h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
 }
 
 .project-meta {
@@ -347,101 +369,159 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.project-tech {
+.project-showcase {
+    margin: 3rem 0;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.showcase-item {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.showcase-item:hover {
+    transform: scale(1.02);
+}
+
+.showcase-carousel {
     display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
 }
 
-.project-tech span {
-    background: var(--card-bg);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-}
-
-.project-links {
-    display: flex;
-    gap: 1rem;
+.showcase-carousel img {
+    height: 200px;
+    min-width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: start;
 }
 
 .project-content {
-    display: grid;
-    gap: 3rem;
-}
-
-.project-images img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .project-description h2 {
+    font-size: 1.8rem;
     color: var(--primary-color);
-    font-size: 1.5rem;
     margin: 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
-.project-description ul {
-    list-style-type: none;
-    padding: 0;
+.project-description p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
 }
 
-.project-description li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    position: relative;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
 }
 
-.project-description li:before {
-    content: "•";
+.feature-card {
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: var(--card-bg);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2rem;
     color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.tech-stack {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.project-card:hover .project-overlay {
-    background: linear-gradient(
-        to bottom,
-        rgba(36, 0, 70, 0.9),
-        rgba(157, 78, 221, 0.7)
-    );
-}
-
-.project-status {
-    background: rgba(46, 213, 115, 0.9);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: 0.9rem;
-    color: white;
-}
-
-.project-stats {
-    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    margin: 1.5rem 0;
 }
 
-.project-stats span {
-    background: rgba(157, 78, 221, 0.2);
-    border: 1px solid var(--accent-color);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    font-size: 0.9rem;
-    color: white;
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    background: var(--card-bg);
+}
+
+.tech-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.challenges {
+    margin: 2rem 0;
+}
+
+.challenge-item {
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: var(--card-bg);
+    margin-bottom: 1.5rem;
+}
+
+.challenge-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+/* Color palette display */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.color-item {
+    text-align: center;
+}
+
+.color-preview {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.color-code {
+    font-family: monospace;
+    display: block;
+    margin-bottom: 0.3rem;
 }
 
 /* Project Showcase Styles */
@@ -619,6 +699,36 @@ h2 {
 
     .showcase-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-detail {
+        padding: 100px 1rem 3rem;
+    }
+    
+    .project {
+        padding: 1.5rem;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-title-area h1 {
+        font-size: 2rem;
+    }
+    
+    .showcase-carousel {
+        margin: 0 -1.5rem;
+        padding: 1rem 1.5rem;
     }
     
     .features-grid {
