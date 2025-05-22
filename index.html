@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Dhadve - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">YD</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Yash Dhadve</span></h1>
+            <p class="typing-text">I'm a </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-primary">Get in Touch</a>
+                <a href="#projects" class="cta-secondary">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a Web Developer with expertise in creating fast, responsive, and user-friendly websites using vanilla JavaScript, HTML5, and CSS3. I specialize in building performant web applications with clean, maintainable code and modern best practices. With a strong foundation in core web technologies and a focus on user experience, I create efficient solutions that work across all devices and browsers. I'm passionate about web accessibility, performance optimization, and creating engaging user interfaces without relying on heavy frameworks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project cards will be added dynamically via JavaScript -->
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <!-- Skills will be added dynamically via JavaScript -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-primary">Send Message</button>
+            </form>
+            <div class="social-links">                <a href="https://github.com/yashdhadve" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yashdhadve" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yashdhadve@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Yash Dhadve. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
