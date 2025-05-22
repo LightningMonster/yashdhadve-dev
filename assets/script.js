@@ -2,6 +2,10 @@
 const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
 
+// Set default theme to light
+body.dataset.theme = 'light';
+themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+
 themeToggle.addEventListener('click', () => {
     body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
     themeToggle.innerHTML = body.dataset.theme === 'dark' 
