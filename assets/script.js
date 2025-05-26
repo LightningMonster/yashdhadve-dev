@@ -1,10 +1,11 @@
-// Theme Toggle
+// Theme handling with localStorage
 const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
 
-// Set default theme to light
-body.dataset.theme = 'light';
-themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+// Get saved theme or default to light
+const savedTheme = localStorage.getItem('theme') || 'light';
+body.dataset.theme = savedTheme;
+themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 
 themeToggle.addEventListener('click', () => {
     body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';

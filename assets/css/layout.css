@@ -1,0 +1,308 @@
+:root {
+    --container-width: clamp(320px, 90%, 1200px);
+    --section-spacing: clamp(4rem, 8vw, 8rem);
+    --header-height: 72px;
+}
+
+/* Layout Components */
+
+/* Container */
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--container-padding);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(15, 17, 25, 0.95);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(45deg, var(--color-primary), #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--color-primary);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(15, 17, 25, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: rgba(139, 92, 246, 0.1);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section Layout */
+.section {
+    padding: var(--section-spacing) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: calc(var(--header-height) + 2rem) 0 var(--section-spacing);
+    background: radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: var(--space-4);
+}
+
+.hero .typing-text {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    height: 1.5em;
+    margin-bottom: var(--space-6);
+}
+
+/* Grid Layouts */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.services-detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+/* Experience Counter */
+.experience-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.experience-counter span {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+/* Footer */
+footer {
+    padding: var(--space-6) 0;
+    text-align: center;
+    background: var(--glass-light);
+}
+
+.footer {
+    padding: 2rem 0;
+    margin-top: var(--section-spacing);
+    text-align: center;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        padding: var(--space-2);
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--glass-light);
+        padding: var(--space-3);
+        margin-top: var(--space-2);
+        border-radius: var(--radius-lg);
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: calc(var(--header-height) + 1rem);
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .services-grid,
+    .project-grid,
+    .services-detailed-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn var(--transition-normal) forwards;
+}
