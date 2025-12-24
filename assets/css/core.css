@@ -1,9 +1,9 @@
 /* Core Theme and Variables */
 :root {
     /* Colors */
-    --color-primary: #8B5CF6;
-    --color-secondary: #6366F1;
-    --color-accent: #F472B6;
+    --color-primary: #bafc04;
+    --color-secondary: #1e293b;
+    --color-accent: #bafc04;
     --color-bg: #0F1119;
     --color-bg-offset: rgba(255, 255, 255, 0.05);
     --color-text: #FFFFFF;
@@ -129,10 +129,7 @@ button {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-primary);
 }
 
 .visually-hidden {
@@ -286,9 +283,9 @@ button {
     --color-text: #ffffff;
     --color-text-muted: rgba(255, 255, 255, 0.7);
     --color-border: rgba(255, 255, 255, 0.1);
-    --color-primary: #6366f1;
-    --color-secondary: #8b5cf6;
-    --color-accent: #d946ef;
+    --color-primary: #bafc04;
+    --color-secondary: #1e293b;
+    --color-accent: #bafc04;
     
     /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -401,8 +398,8 @@ a:hover {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
-    color: white;
+    background: var(--color-primary);
+    color: #000;
     border: none;
 }
 
@@ -473,7 +470,7 @@ label {
 .section-badge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: linear-gradient(45deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    background: rgba(186, 252, 4, 0.1);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
@@ -482,10 +479,7 @@ label {
 
 /* Utilities */
 .text-gradient {
-    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--color-primary);
 }
 
 .text-center {

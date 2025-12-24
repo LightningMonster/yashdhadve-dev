@@ -321,13 +321,13 @@ class PortfolioHomePage {
 document.addEventListener('DOMContentLoaded', () => {
     new PortfolioHomePage();
 
-    // Custom cursor
-    const cursor = document.querySelector('.custom-cursor');
-    
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
+    // Custom cursor - DISABLED
+    // const cursor = document.querySelector('.custom-cursor');
+    // 
+    // document.addEventListener('mousemove', (e) => {
+    //     cursor.style.left = e.clientX + 'px';
+    //     cursor.style.top = e.clientY + 'px';
+    // });
 
     // Intersection Observer for section animations
     const sections = document.querySelectorAll('.section');

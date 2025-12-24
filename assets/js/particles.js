@@ -35,7 +35,7 @@ class ParticleSystem {
         this.particles.forEach(particle => {
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            this.ctx.fillStyle = `rgba(139, 92, 246, ${particle.opacity})`;
+            this.ctx.fillStyle = `rgba(186, 252, 4, ${particle.opacity})`;
             this.ctx.fill();
         });
 
@@ -51,7 +51,7 @@ class ParticleSystem {
 
                 if (distance < 150) {
                     this.ctx.beginPath();
-                    this.ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 * (1 - distance/150)})`;
+                    this.ctx.strokeStyle = `rgba(186, 252, 4, ${0.1 * (1 - distance/150)})`;
                     this.ctx.lineWidth = 0.5;
                     this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
                     this.ctx.lineTo(this.particles[j].x, this.particles[j].y);

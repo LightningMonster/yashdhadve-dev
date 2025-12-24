@@ -1,13 +1,12 @@
 /* Modern styles for enhanced portfolio */
 
 :root {
-  --gradient-primary: linear-gradient(45deg, #6366f1, #8b5cf6, #d946ef);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --transition-smooth: all 0.3s ease-in-out;
   --radius-lg: 1rem;
   --radius-full: 9999px;
-  --color-primary: #6366f1;
-  --color-secondary: #8b5cf6;
+  --color-primary: #bafc04;
+  --color-secondary: #1e293b;
   --color-text: #fff;
   --color-border: rgba(255, 255, 255, 0.1);
 }
@@ -15,7 +14,7 @@
 /* Enhanced Hero Section */
 .hero {
   min-height: 100vh;
-  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+  background: rgba(186, 252, 4, 0.03);
   position: relative;
   overflow: hidden;
 }
@@ -25,7 +24,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23bafc04' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .hero-content {
@@ -36,12 +35,8 @@
 
 /* Animated gradient text */
 .gradient-text {
-  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: gradient 8s ease infinite;
-  background-size: 200% 200%;
+  color: var(--color-primary);
+  animation: none;
 }
 
 /* Enhanced Service Cards */
@@ -62,10 +57,7 @@
 
 .service-icon {
   font-size: 2rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-primary);
 }
 
 /* Project Cards */
@@ -100,7 +92,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  background: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: var(--transition-smooth);
   display: flex;
@@ -109,7 +101,7 @@
 }
 
 .project-card:hover .project-overlay {
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Contact Form */
@@ -136,11 +128,7 @@
 }
 
 /* Animations */
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+/* Gradient animation removed */
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -152,7 +140,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  background: var(--color-primary);
   border-radius: 4px;
 }
 
@@ -190,8 +178,8 @@
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
-  color: white;
+  background: var(--color-primary);
+  color: #000;
   border: none;
 }
 
@@ -246,7 +234,7 @@
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(15, 17, 25, 0.95), rgba(15, 17, 25, 0.5));
+  background: rgba(15, 17, 25, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -256,7 +244,7 @@
 }
 
 .project-card:hover .project-overlay {
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Tech Tags */
