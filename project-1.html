@@ -4,34 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Shop E-Commerce Website - Project Details</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
         /* Project Details Page Styles */
         .project-detail-hero {
-            min-height: 60vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 3rem 1rem;
             position: relative;
             overflow: hidden;
+            background-image: url('assets/images/project-1/background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .project-detail-hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(8, 203, 0, 0.1), rgba(186, 252, 4, 0.05));
+            background: rgba(15, 17, 25, 0.7);
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(8px);
             pointer-events: none;
-            z-index: -1;
+            z-index: 1;
         }
 
         .project-detail-container {
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .project-hero-content {
@@ -68,6 +77,7 @@
         .screenshots-section {
             margin: 4rem 0;
             padding: 3rem 1rem;
+            scroll-margin-top: 100px;
         }
 
         .section-title {
@@ -142,6 +152,7 @@
         .tech-stack-section {
             margin: 4rem 0;
             padding: 3rem 1rem;
+            scroll-margin-top: 100px;
         }
 
         .tech-grid {
@@ -350,18 +361,17 @@
                     <i class="fas fa-bars" aria-hidden="true"></i>
                 </button>
                 <div class="nav-links" role="navigation">
-                    <a href="index.html#home" class="nav-link">Home</a>
-                    <a href="index.html#skills" class="nav-link">Skills</a>
-                    <a href="index.html#projects" class="nav-link">Projects</a>
-                    <a href="index.html#services" class="nav-link">Services</a>
-                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="index.html#home" class="nav-link">Portfolio</a>
+                    <a href="project-1.html" class="nav-link">Home</a>
+                    <a href="project-1.html#screenshots" class="nav-link">Screenshots</a>
+                    <a href="project-1.html#tech-stack-section" class="nav-link">Technology</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Project Hero Section -->
-    <section class="project-detail-hero">
+    <section id="project-detail-hero" class="project-detail-hero">
         <div class="project-detail-container">
             <div class="project-hero-content">
                 <div class="project-detail-category">Web Design</div>
@@ -374,9 +384,9 @@
     </section>
 
     <!-- Main Content -->
-    <div class="project-detail-container">
+    <div id="project-detail-container" class="project-detail-container">
         <!-- Screenshots Section -->
-        <section class="screenshots-section">
+        <section id="screenshots" class="screenshots-section">
             <h2 class="section-title">Project Screenshots</h2>
             <div class="screenshots-grid">
                 <div class="screenshot-card">
@@ -389,7 +399,7 @@
                     </div>
                 </div>
 
-                <div class="screenshot-card">
+                <div id="featured-plants" class="screenshot-card">
                     <div class="screenshot-image">
                         <img src="assets/images/project-1/featured-plants.png" alt="Project 1 | Features=d Plants " />
                     </div>
@@ -412,9 +422,9 @@
         </section>
 
         <!-- Technology Stack -->
-        <section class="tech-stack-section">
-            <h2 class="section-title">Technology Stack</h2>
-            <div class="tech-grid">
+        <section id="tech-stack-section" class="tech-stack-section">
+            <h2  class="section-title">Technology Stack</h2>
+            <div  class="tech-grid">
                 <div class="tech-item">
                     <div class="tech-icon">
                         <i class="fab fa-figma"></i>
@@ -456,15 +466,15 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div style="text-align: center;">
-                <div style="color: var(--color-text-muted); font-size: 0.9rem;">
-                    Thank you for exploring my <strong style="color: var(--color-primary);">project details</strong>
-                </div>
-                <div style="margin-top: 1rem; font-size: 0.85rem; color: rgba(238, 238, 238, 0.6);">
-                    © 2026 Yash Dhadve. All rights reserved.
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                Thank you for visiting my <strong>portfolio</strong>. I'm always excited to work on new and interesting
+                projects!
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-credit">
+                <span>© <span class="footer-year">2026</span> Yash Dhadve | Made with <i class="fas fa-heart" style="color: #08CB00;"></i></span>
             </div>
         </div>
     </footer>

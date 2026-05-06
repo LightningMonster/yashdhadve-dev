@@ -5,10 +5,10 @@
 
 .hero {
     min-height: calc(100vh - 72px); /* subtract navbar height */
+    padding-top: 60px;
     display: flex;
     align-items: center;
     position: relative;
-    /* top:75px; */
     overflow: hidden;
     background: rgba(186, 252, 4, 0.03);
 }
