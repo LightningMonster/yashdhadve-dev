@@ -19,3 +19,34 @@ function setActiveLink() {
 }
 
 window.addEventListener("scroll", setActiveLink);
+
+// Mobile Menu Toggle
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinksContainer = document.querySelector(".nav-links");
+
+if (menuToggle && navLinksContainer) {
+    menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !isExpanded);
+        navLinksContainer.classList.toggle("active");
+        
+        const icon = menuToggle.querySelector("i");
+        if (icon) {
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-times");
+        }
+    });
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            menuToggle.setAttribute("aria-expanded", "false");
+            navLinksContainer.classList.remove("active");
+            const icon = menuToggle.querySelector("i");
+            if (icon) {
+                icon.classList.add("fa-bars");
+                icon.classList.remove("fa-times");
+            }
+        });
+    });
+}

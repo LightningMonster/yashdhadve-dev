@@ -40,9 +40,9 @@
     text-align: left;
 }
 
-/* Prevent hero heading from breaking */
+/* Prevent hero heading from breaking too early but allow wrap */
 .hero-content h1 {
-    white-space: nowrap;
+    white-space: normal;
 }
 
 /* =========================================================
@@ -201,7 +201,7 @@
 /* Mobile */
 @media (max-width: 768px) {
     .hero {
-        padding: 3rem 1.5rem;
+        padding: 8rem 1.5rem 3rem 1.5rem; /* Increased top padding to clear navbar */
         min-height: auto;
     }
 
@@ -235,7 +235,7 @@
 
 @media (max-width: 480px) {
     .hero {
-        padding: 2rem 1rem;
+        padding: 8rem 1rem 2rem 1rem; /* Increased top padding */
         gap: 1rem;
     }
 

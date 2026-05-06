@@ -3,12 +3,12 @@
 ========================= */
 :root {
     /* Colors */
-    --color-primary: #08CB00;          /* Neon Green */
+    --color-primary: #10e307;          /* Brighter Neon Green */
     --color-secondary: #253900;        /* Dark Green Accent */
-    --color-accent: #08CB00;           /* Same as primary */
+    --color-accent: #10e307;           /* Same as primary */
 
-    --color-bg: #000000;               /* Pure Black */
-    --color-bg-offset: rgba(8, 203, 0, 0.08); /* Subtle green overlay */
+    --color-bg: #050a05;               /* Very Dark Green-Black */
+    --color-bg-offset: rgba(16, 227, 7, 0.08); /* Subtle green overlay */
 
     --color-text: #EEEEEE;             /* Soft white */
     --color-text-muted: rgba(238, 238, 238, 0.7);
@@ -101,6 +101,9 @@ body {
     line-height: 1.7;
     color: var(--color-text);
     background-color: var(--color-bg);
+    background-image: radial-gradient(circle at top right, rgba(16, 227, 7, 0.08) 0%, transparent 60%),
+                      radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -257,7 +260,6 @@ img {
 .social-link {
     width: 2.5rem;
     height: 2.5rem;
-    margin-top: 1;
 
     display: flex;
     align-items: center;
@@ -311,7 +313,7 @@ img {
     }
 
     body {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .container {
@@ -346,7 +348,7 @@ img {
     }
 
     body {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
     }
 
     .container {
