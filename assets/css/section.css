@@ -103,7 +103,6 @@
 
     .header-background-text {
         font-size: clamp(2rem, 6vw, 5rem);
-        top: -2rem;
     }
 }
 
@@ -123,6 +122,5 @@
 
     .header-background-text {
         font-size: clamp(1.5rem, 5vw, 3rem);
-        top: -1.5rem;
     }
 } 

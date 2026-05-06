@@ -347,7 +347,13 @@
 @media (max-width: 768px) {
     .projects-header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .projects-header > a {
+        position: static;
+        margin-top: 1rem;
     }
 
     .view-all-link {
